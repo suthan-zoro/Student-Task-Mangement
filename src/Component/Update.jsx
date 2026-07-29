@@ -18,7 +18,7 @@ const Update = () => {
 
   // Fetch data
   useEffect(() => {
-    fetch("https://api-student-data-1.onrender.com/details")
+    fetch("http://localhost:5001/details")
       .then((res) => res.json())
       .then((data) => setTask(data))
       .catch((err) => {
@@ -86,7 +86,7 @@ const Update = () => {
     );
 
     fetch(
-      `https://api-student-data-1.onrender.com/details/${student.id}`,
+      `http://localhost:5001/details/${student.id}`,
       {
         method: "PATCH",
         headers: {

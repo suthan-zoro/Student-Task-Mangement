@@ -47,7 +47,7 @@ function Login() {
     }
 
     // Fetch users
-    fetch("https://api-student-data-1.onrender.com/details")
+    fetch("http://localhost:5001/details")
       .then((res) => res.json())
       .then((data) => {
 

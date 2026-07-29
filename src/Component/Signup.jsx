@@ -108,7 +108,7 @@ function SignUp() {
     // Save User
 
     fetch(
-      "https://api-student-data-1.onrender.com/details",
+      "http://localhost:5001/details",
       {
         method: "POST",
 

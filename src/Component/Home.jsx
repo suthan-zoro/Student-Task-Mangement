@@ -12,7 +12,7 @@ const Home = () => {
 
   // Fetch latest data
   const refreshTasks = () => {
-    fetch("https://api-student-data-1.onrender.com/details")
+    fetch("http://localhost:5001/details")
       .then((res) => res.json())
       .then((data) => {
         settask(data);
@@ -57,7 +57,7 @@ const Home = () => {
       );
 
       const response = await fetch(
-        `https://api-student-data-1.onrender.com/details/${student.id}`,
+        `http://localhost:5001/details/${student.id}`,
         {
           method: "PATCH",
           headers: {
@@ -100,7 +100,7 @@ const Home = () => {
       );
 
       const response = await fetch(
-        `https://api-student-data-1.onrender.com/details/${student.id}`,
+        `http://localhost:5001/details/${student.id}`,
         {
           method: "PATCH",
           headers: {

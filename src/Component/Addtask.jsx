@@ -11,7 +11,7 @@ const Addtask = () => {
   const [task, settask] = useState([]);
 
   useEffect(() => {
-    fetch("https://api-student-data-1.onrender.com/details")
+    fetch("http://localhost:5001/details")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -45,7 +45,7 @@ const Addtask = () => {
     const updatedTasks = [...(student.tasks || []), newTask];
 
     fetch(
-      `https://api-student-data-1.onrender.com/details/${student.id}`,
+      `http://localhost:5001/details/${student.id}`,
       {
         method: "PATCH",
         headers: {
